@@ -1,0 +1,55 @@
+<!-- Extend the "base.html" template -->
+{% extends "base.html" %}
+
+<!-- Set the title for this specific page -->
+{% block title %}TaskTracker Login{% endblock %}
+
+<!-- Block for content to be injected into the "base.html" template -->
+{% block content %}
+<!-- Form for user login via POST request -->
+<form method="POST">
+  <!-- Heading for the login form -->
+  <h2 align="center">Welcome to TaskTracker!</h2>
+  <div class="greeting" align="center">
+    <br />
+    <p>
+      Get ready to boost your productivity and stay on top of your to-do list.
+      TaskTracker simplifies task management, helping you focus on what matters
+      most. Sign in now to get started!
+    </p>
+  </div>
+  <br />
+
+  <!-- Form group for email input -->
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <!-- Input field for entering email -->
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Enter email"
+    />
+  </div>
+
+  <!-- Form group for password input -->
+  <div class="form-group">
+    <label for="password">Password</label>
+    <!-- Input field for entering password -->
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+    />
+  </div>
+
+  <!-- Line break for better spacing -->
+  <br />
+
+  <!-- Button to submit the login form -->
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{% endblock %}
